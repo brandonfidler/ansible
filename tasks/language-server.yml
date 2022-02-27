@@ -1,0 +1,36 @@
+- name: tsserver install
+  shell: npm install -g typescript typescript-language-server 
+  tags:
+    - install
+    - neovim
+    - language
+- name: html, css language install
+  shell: npm i -g vscode-langservers-extracted
+  tags:
+    - install
+    - neovim
+    - language
+- name:  css_module language install
+  shell: npm install -g cssmodules-language-server
+  tags:
+    - install
+    - neovim
+    - language
+- name: install solidity language server 
+  shell: npm install -g solidity-language-server
+  tags:
+    - install
+    - neovim
+    - language
+- name: install tailwind language server 
+  shell: npm install -g @tailwindcss/language-server
+  tags:
+    - install
+    - neovim
+    - language
+- name: install vim language server 
+  shell: npm install -g vim-language-server
+  tags:
+    - install
+    - neovim
+    - language
