@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py --user
+python -m pip install --user ansible
+
+cd .ssh
+sudo ansible-vault decrypt id_rsa_personal
+cd ..
+ansible-playbook local.yml --ask-become-pass
