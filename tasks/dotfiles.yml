@@ -1,5 +1,5 @@
 - name: Installing stow
-  apt: name=stow
+  homebrew: name=stow
   tags:
     - install
     - dotfiles

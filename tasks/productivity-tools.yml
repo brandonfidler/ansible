@@ -1,6 +1,6 @@
 - name: Install packages
   homebrew:
-    name: [ "tmux", "wireshark", "fzf", "gimp", "xclip", "screenkey", "tldr", "ripgrep"]
+    name: [ "tmux", "wireshark", "fzf", "gimp", "xclip", "tldr", "ripgrep"]
   tags:
     - install
     - productivity

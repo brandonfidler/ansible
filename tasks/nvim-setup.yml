@@ -3,27 +3,15 @@
   tags:
     - install
     - neovim
-- name: Clone Neovim
-  ansible.builtin.git:
-    repo: 'https://github.com/neovim/neovim.git'
-    dest: "{{ lookup('env', 'HOME') }}/neovim"
+
+- name: Install Neovim
+  homebrew: name=neovim
   tags:
     - install
     - neovim
-- name: Build neovim
-  shell: "cd {{ lookup('env', 'HOME') }}/neovim && make -j 20"
-  tags:
-    - install
-    - neovim
-- name: Install neovim
-  become: true
-  shell: "cd {{ lookup('env', 'HOME') }}/neovim && make install"
-  tags:
-    - install
-    - neovim
+
 - name: Neovim Plugin Development 1
-  become: true
-  apt: name=luarocks
+  homebrew: name=luarocks
   tags:
     - install
     - neovim
