@@ -25,11 +25,10 @@
     - dotfiles
     - install
     - ssh
- tasks:
-  - name: Set authorized key from file
-    authorized_key:
-      user: "brandonfidler"
-      state: present
-      key: "{{ lookup('file', item) }}"
-    with_fileglob:
+- name: Set authorized key from file
+  authorized_key:
+    user: "brandonfidler"
+    state: present
+    key: "{{ lookup('file', item) }}"
+  with_fileglob:
     - /home/brandonfidler/.ssh/*.pub
