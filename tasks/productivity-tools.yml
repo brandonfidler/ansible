@@ -1,6 +1,5 @@
 - name: Install packages
-  become: true
-  apt:
+  homebrew:
     name: [ "tmux", "wireshark", "fzf", "gimp", "xclip", "screenkey", "tldr", "ripgrep"]
   tags:
     - install

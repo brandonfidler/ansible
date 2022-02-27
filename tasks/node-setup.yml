@@ -1,6 +1,5 @@
 - name: Install nodejs and npm
-  become: true
-  apt:
+  homebrew:
     name: ["nodejs", "npm"]
   tags:
     - install
@@ -32,14 +31,14 @@
   - npm-path
 
 - name: Install N
-  npm:
+  homebrew:
     name: n
-    global: yes
   tags:
     - install
     - node
 
 - name: Install correct version of Node
+  become: true
   shell: n 14
   tags:
     - install
